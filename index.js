@@ -16,12 +16,18 @@ const TOKEN = process.env.TOKEN;
 
 client.once('ready', async () => {
   console.log(`Covenant Bot online — ${client.user.tag}`);
-  const commands = [
-    new SlashCommandBuilder().setName('fund').setDescription('Support the IAS prototype').toJSON(),
-    new SlashCommandBuilder().setName('bounty').setDescription('Current red-team bounties').toJSON(),
-    new SlashCommandBuilder().setName('repo').setDescription('Link to the Covenant repo').toJSON(),
-  ];
-  await client.application.commands.set(commands);
+
+  // INSTANT commands — only in THIS server (appears in 3 seconds)
+  const guildId = '1443021378671349954'; // ← your server ID
+  const guild = client.guilds.cache.get(guildId);
+  if (guild) {
+    await guild.commands.set([
+      new SlashCommandBuilder().setName('fund').setDescription('Support the IAS prototype').toJSON(),
+      new SlashCommandBuilder().setName('bounty').setDescription('Current red-team bounties').toJSON(),
+      new SlashCommandBuilder().setName('repo').setDescription('Link to the Covenant repo').toJSON(),
+    ]);
+    console.log('Slash commands registered instantly in Covenant server!');
+  }
 });
 
 // Welcome DM
