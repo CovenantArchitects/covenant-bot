@@ -1,17 +1,16 @@
 # Covenant Bot
 
-A simple, open-source Discord bot for the Covenant Architects server—handling welcomes, slash commands for funding/bounties, reaction roles, and more. Built with Discord.js v14 for Node.js. Keeps things on-brand: physics > promises.
+A lightweight, open-source Discord bot for the Covenant Architects community—handling welcomes, slash commands for funding/bounties/repo links, reaction roles, and more. Built with Discord.js v14 for Node.js. Keeps things simple and on-brand: physics > promises.
 
 ## Quick Features
-- **Slash Commands**: `/fund` (funding links), `/bounty` (active red-team challenges), `/repo` (Covenant repo), `/status` (prototype timeline), and more (19 total).
-- **Auto-Welcome**: DMs new members with primer info.
-- **Reaction Roles**: Auto-assigns `@Verified` on ✅ reaction in #covenant-primer.
-- **Red-Team Ready**: Logs bounties and challenges for easy auditing.
+- **Slash Commands** (19 total): `/fund` (funding options), `/bounty` (active red-team challenges), `/repo` (Covenant repo), `/status` (prototype timeline), `/paper` (IAS PDF), `/silicon` (funding countdown), and more.
+- **Auto-Welcome**: DMs new members with primer info and repo link.
+- **Reaction Roles**: Auto-assigns `@Verified` on ✅ in #covenant-primer.
+- **Red-Team Tools**: Logs bounties and challenges for easy tracking.
 
-For the full Covenant project (constitutional framework + IAS hardware): [github.com/CovenantArchitects/The-Partnership-Covenant](https://github.com/CovenantArchitects/The-Partnership-Covenant).
-
+Ties into the main Covenant project (open constitutional framework + IAS hardware): [github.com/CovenantArchitects/The-Partnership-Covenant](https://github.com/CovenantArchitects/The-Partnership-Covenant).
 ## Setup (5 Minutes)
-1. **Clone & Install**:
+1. **Clone & Install**:      
 git clone https://github.com/CovenantArchitects/covenant-bot.git
 cd covenant-bot
 npm install
